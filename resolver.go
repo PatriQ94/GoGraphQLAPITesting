@@ -2,9 +2,11 @@ package GoGraphQLAPITesting
 
 import (
 	"context"
+
+	model "github.com/PatriQ94/GoGraphQLAPITesting/models"
 ) // THIS CODE IS A STARTING POINT ONLY. IT WILL NOT BE UPDATED WITH SCHEMA CHANGES.
 
-var ret []*User
+var ret []*model.User
 
 type Resolver struct{}
 
@@ -17,9 +19,9 @@ func (r *Resolver) Query() QueryResolver {
 
 type mutationResolver struct{ *Resolver }
 
-func (r *mutationResolver) CreateUser(ctx context.Context, input NewUser) (*User, error) {
+func (r *mutationResolver) CreateUser(ctx context.Context, input model.NewUser) (*model.User, error) {
 
-	nUser := &User{
+	nUser := &model.User{
 		ID:        "1",
 		FirstName: input.FirstName,
 		LastName:  input.LastName,
@@ -35,7 +37,7 @@ func (r *mutationResolver) CreateUser(ctx context.Context, input NewUser) (*User
 
 type queryResolver struct{ *Resolver }
 
-func (r *queryResolver) Users(ctx context.Context) ([]*User, error) {
+func (r *queryResolver) Users(ctx context.Context) ([]*model.User, error) {
 	//List of users to return
 
 	return ret, nil

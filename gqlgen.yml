@@ -13,3 +13,8 @@ resolver:
   filename: resolver.go
   type: Resolver
 autobind: []
+models:
+  User:
+    model: github.com/PatriQ94/GoGraphQLAPITesting/models.User
+  NewUser:
+    model: github.com/PatriQ94/GoGraphQLAPITesting/models.NewUser
