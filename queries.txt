@@ -1,0 +1,25 @@
+# Write your query or mutation here
+query{
+  users{
+    first_name
+    last_name
+    email
+    id
+    created_at
+  }
+}
+
+
+
+mutation{
+  createUser(input:{
+    first_name:"Mičo",
+    last_name:"Forever",
+    email:"Mičo.forever@gmail.com"
+    password:"admin"
+  }){
+    id
+    first_name
+    last_name
+  }
+}
