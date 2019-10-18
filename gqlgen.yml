@@ -18,3 +18,6 @@ models:
     model: github.com/PatriQ94/GoGraphQLAPITesting/models.User
   NewUser:
     model: github.com/PatriQ94/GoGraphQLAPITesting/models.NewUser
+  ID: # The GraphQL type ID is backed by
+    model:
+      - github.com/99designs/gqlgen/graphql.IntID  # An go integer

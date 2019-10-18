@@ -9,11 +9,9 @@ query{
   }
 }
 
-
-
 mutation{
   createUser(input:{
-    first_name:"Mičo",
+    first_name:"Mičio"
     last_name:"Forever",
     email:"Mičo.forever@gmail.com"
     password:"admin"
@@ -22,4 +20,8 @@ mutation{
     first_name
     last_name
   }
+}
+
+mutation{
+  removeUser(id:2)
 }
